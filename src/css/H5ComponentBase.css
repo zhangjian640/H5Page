@@ -1,0 +1,15 @@
+.h5_component{
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.h5_component_name_base{
+    transition: all 1s;
+}
+.h5_component_name_base_load{
+    opacity: 1;
+}
+.h5_component_name_base_leave{
+    opacity: 0;
+
+}

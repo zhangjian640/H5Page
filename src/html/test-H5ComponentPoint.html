@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>测试页面</title>
+    <link rel="stylesheet" href="./css/H5ComponentBase.css">
+    <!--散点图-->
+    <link rel="stylesheet" href="./css/H5ComponentPoint.css">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        /*.iphone{*/
+            /*width: 340px;*/
+            /*height:540px;*/
+            /*background: #fff;*/
+            /*position: absolute;*/
+            /*top:50%;*/
+            /*left:50%;*/
+            /*margin: -270px 0 0 -170px;*/
+        /*}*/
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.fullPage.js"></script>
+    <script src="./js/H5ComponentBase.js"></script>
+    <!--散点图-->
+    <script src="./js/H5ComponentPoint.js"></script>
+
+</head>
+<body>
+<div class="iphone">
+
+</div>
+<script>
+    var cfg = {
+        type: 'point',
+//        text: 'text',
+//        bg: './imgs/p1_people.png',
+        data: [
+            ['A项', .4, 'green'],
+            ['B项', .2, 'yellow', 0, '-60%'],
+            ['C项', .1, 'green', 0, '120%']
+        ],
+        width: 300,
+        height: 300,
+        css: {
+            bottom: 0,
+            opacity: 1
+        },
+        animateIn: {bottom: '40%', opacity: 1},
+        animateOut: {bottom: 0, opacity: 0},
+        center: true
+    };
+    var h5 = new H5ComponentPoint('myName',cfg);
+    $('.iphone').append(h5);
+
+    var leave  = true;
+    $('body').click(function () {
+        leave = !leave;
+        $('.h5_component').trigger(leave ? 'onLeave' : 'onLoad');
+    });
+</script>
+</body>
+</html>

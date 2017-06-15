@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>测试页面</title>
+    <link rel="stylesheet" href="./css/H5.css">
+    <link rel="stylesheet" href="./css/H5ComponentBase.css">
+    <script src="./js/H5ComponentBase.js"></script>
+    <script src="./js/H5.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.fullPage.js"></script>
+
+</head>
+<body>
+<script>
+$(function () {
+    var h5 = new H5();
+
+    h5.addPage('face')
+        .addComponent('logo', {
+            text: 'logo',
+            width: 400,
+            height: 100,
+            css: {backgroundColor: 'blue', top:100, opacity: 0},
+            center: true,
+            animateIn: {opacity: 1},
+            animateOut: {opacity: 0}
+        })
+        .addComponent('slogan', {
+            text: 'slogan',
+            width: 400,
+            height: 100,
+            css: {backgroundColor: 'blue', top:300, opacity: 0},
+            center: true,
+            animateIn: {opacity: 1},
+            animateOut: {opacity: 0}
+        })
+    .addPage('desc')
+        .addComponent('caption', {
+            text: '核心理念',
+            width: 400,
+            height: 100,
+            css: {backgroundColor: 'blue', top:100},
+            center: true
+        })
+    .addPage('page-3')
+        .addComponent('caption', {
+            text: '课程方向分布',
+            width: 400,
+            height: 100,
+            css: {backgroundColor: 'blue', top:100},
+            center: true
+        })
+    .loader();
+})
+</script>
+</body>
+</html>
