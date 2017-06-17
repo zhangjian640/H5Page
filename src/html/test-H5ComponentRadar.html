@@ -6,23 +6,23 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>测试页面</title>
     <link rel="stylesheet" href="./css/H5ComponentBase.css">
-    <!--柱图-->
-    <link rel="stylesheet" href="./css/H5ComponentBar.css">
-    <script src="./js/H5ComponentBar.js"></script>
+    <!--雷达图-->
+    <link rel="stylesheet" href="./css/H5ComponentRadar.css">
+    <script src="./js/H5ComponentRadar.js"></script>
     <style>
         body{
             padding: 0;
             margin: 0;
         }
-        /*.iphone{*/
-        /*width: 340px;*/
-        /*height:540px;*/
-        /*background: #fff;*/
-        /*position: absolute;*/
-        /*top:50%;*/
-        /*left:50%;*/
-        /*margin: -270px 0 0 -170px;*/
-        /*}*/
+        .iphone{
+        width: 340px;
+        height:540px;
+        background: #fff;
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin: -270px 0 0 -170px;
+        }
 
     </style>
     <script src="./js/jquery.js"></script>
@@ -37,17 +37,16 @@
 </div>
 <script>
     var cfg = {
-        type: 'bar',
+        type: 'radar',
         data: [
-            ['JavaScript', .4, '#ff7676'],
-            ['HTML', .2],
-            ['CSS', .1],
-            ['JQuery', .3],
-            ['Bootstrap', .05]
-
+            ['JavaScript', .9, '#ff7676'],
+            ['HTML', .6],
+            ['CSS', .8],
+            ['JQuery', .5],
+            ['Bootstrap', .7]
         ],
-        width: 530,
-        height: 600,
+        width: 400,
+        height: 400,
         css: {
             top: 100,
             opacity: 0
@@ -56,7 +55,7 @@
         animateOut: {opacity: 0,top: 100},
         center: true
     };
-    var h5 = new H5ComponentBar('myBar',cfg);
+    var h5 = new H5ComponentRadar('Radar',cfg);
     $('.iphone').append(h5);
 
     var leave  = true;

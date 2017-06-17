@@ -44,7 +44,7 @@ gulp.task('js-watch', ['js'], browserSync.reload);
 gulp.task("default",function(){
 
     browserSync.init({
-        server: "./"
+        server: "./dist"
     });
 
     gulp.watch("src/css/*.css",["less"]).on("change",reload);

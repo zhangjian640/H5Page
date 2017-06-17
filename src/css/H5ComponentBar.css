@@ -19,8 +19,8 @@
     position: relative;
 }
 .h5_component_name_bar .rate .bg{
-    background: #99c0ff;
-    width: 0%;
+    background-color: #99c0ff;
+    width: 0;
     height: 100%;
     position: absolute;
     border-radius: 3px;
@@ -38,7 +38,7 @@
 }
 
 .h5_component_name_bar_load .rate .bg{
-    -webkit-transition: all 1s .5s;
+    -webkit-transition: all 3s .5s;
     width: 100%;
 }
 .h5_component_name_bar_leave .rate .bg{
@@ -46,7 +46,7 @@
 }
 
 .h5_component_name_bar_load .per{
-    -webkit-transition: all 1s 1.5s;
+    -webkit-transition: all 3s 1.5s;
     opacity: 1;
 }
 .h5_component_name_bar_leave .per{

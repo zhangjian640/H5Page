@@ -30,6 +30,5 @@ var H5ComponentBase = function (name,cfg) {
     });
 
 
-
     return component;
 };
